@@ -1,12 +1,205 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
     <title>Candy's Classic Cakes</title>
-</head>
-<body>
-    <h1>Candy's Classic Cakes: coming soon!!</h1>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <a href="#main-content" class="skip-link">Skip to content</a>
+
+      <a href="/" id="logo-link">
+        <img src="images/logo.png" alt="Candy's Classic Cakes Home" id="logo" />
+      </a>
+
+      <button
+        id="menu"
+        class="mingcute--menu-fill"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      ></button>
+
+      <!-- !!!!!!!!!!!! Make a slide out hamburger menu? -->
+      <nav>
+        <ul class="nav-links" id="primary-navigation">
+          <li><a href="/">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#cakes">Cakes</a></li>
+          <li><a href="#sourdough">Sourdough</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- Hero -->
+      <section class="homeSsection">
+        <h1>Candy's Classic Cakes</h1>
+        <a href="#" class="button">Order now</a>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="home-section">
+        <h2 class="screen-reader-only">About</h2>
+
+        <div>
+          <img id="candy" src="images/placeholder.png" alt="" />
+          <h3>Meet Candy!</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo illum
+            voluptatem cum deserunt dolor exercitationem iusto ea possimus
+            recusandae eum nulla, totam explicabo dolore similique, a esse
+            temporibus neque quasi!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus in
+            at excepturi alias, obcaecati quod quasi ipsam quam quibusdam. Animi
+            soluta quisquam ea harum quaerat provident tempora laudantium culpa
+            obcaecati?
+          </p>
+        </div>
+      </section>
+
+      <!-- Green Section Example -->
+      <section class="home-section green-section">
+        <section id="endorsed-products">
+          <div class="container">
+            <h2>Other Section</h2>
+            <p class="section-intro">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              alias ipsa assumenda illum.
+            </p>
+
+            <ul class="product-grid">
+              <li class="product-card">
+                <a
+                  href="https://www.standardprocess.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="product-link"
+                >
+                  <div class="logo-wrapper">
+                    <img
+                      src="images/placeholder.png"
+                      alt="Standard Process logo"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3>Lorem ipsum</h3>
+                </a>
+              </li>
+
+              <!-- aegis formulas.com => need the special link -->
+              <li class="product-card">
+                <a
+                  href="https://www.aegisformulas.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="product-link"
+                >
+                  <div class="logo-wrapper">
+                    <img
+                      src="images/placeholder.png"
+                      alt="Aegis Formulas logo"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3>Lorem ipsum</h3>
+                </a>
+              </li>
+
+              <li class="product-card">
+                <a
+                  href="https://docereenergetics.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="product-link"
+                >
+                  <div class="logo-wrapper" id="docere-logo">
+                    <img
+                      src="images/placeholder.png"
+                      alt="Docere Energetics logo"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3>Lorem ipsum</h3>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <!-- Services & Pricing -->
+      <section id="services-and-pricing" class="home-section">
+        <h2>Services & Pricing</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis
+          nemo nobis distinctio cumque temporibus reprehenderit praesentium
+          repudiandae illum voluptatum tenetur fugiat autem magnam culpa sed,
+          inventore quasi nam laborum minima.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div id="footer-grid">
+        <!-- home logo -->
+        <a href="/"
+          ><img
+            src="images/logo.png"
+            alt="Atkins Chiropractic Treatment Home"
+            id="footer-logo"
+        /></a>
+
+        <div id="footer-contact">
+          <!-- facebook -->
+          <a href="https://www.facebook.com/profile.php?id=100064147810836"
+            ><span class="mingcute--facebook-line"></span
+            ><span class="screen-reader-only"
+              >Facebook Atkins Chiropractic</span
+            ></a
+          >
+          <!-- email -->
+          <a href="mailto:davidatkinschiro@gmail.com"
+            ><span class="mingcute--mail-line"></span
+            ><span class="screen-reader-only">Email us</span></a
+          >
+        </div>
+        <div id="footer-locations">
+          <div id="chillicothe">
+            <h4>City Name One, ST</h4>
+            <address>
+              123 Placeholder St.<br />
+              City Name One, ST 00000<br />
+              <a
+                href="tel:+10000000000"
+                aria-label="Call to schedule an appointment at our City Name One office by dialing 000 000 0000"
+                >(000) 000-0000</a
+              ><br />
+            </address>
+          </div>
+
+          <div id="jacksonville">
+            <h4>City Name Two, ST</h4>
+            <address>
+              456 Example Ave<br />
+              City Name Two, ST 00000<br />
+              <a
+                href="tel:+10000000001"
+                aria-label="Call to schedule an appointment at our City Name Two office by dialing 000 000 0001"
+                >(000) 000-0001</a
+              ><br />
+            </address>
+          </div>
+        </div>
+
+        <p>&copy; 2025</p>
+      </div>
+    </footer>
+  </body>
 </html>
