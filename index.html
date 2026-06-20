@@ -12,7 +12,11 @@
       <a href="#main-content" class="skip-link">Skip to content</a>
 
       <a href="/" id="logo-link">
-        <img src="images/logo.png" alt="Candy's Classic Cakes Home" id="logo" />
+        <img
+          src="images/logo.png"
+          alt="Home | Candy's Classic Cakes"
+          id="logo"
+        />
       </a>
 
       <button
@@ -27,18 +31,21 @@
       <nav>
         <ul class="nav-links" id="primary-navigation">
           <li><a href="/">Home</a></li>
+          <li><a href="#history">History</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#cakes">Cakes</a></li>
           <li><a href="#sourdough">Sourdough</a></li>
+          <li><a href="#cakes">Angel Food Cakes</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main-content">
       <!-- Hero -->
-      <section class="homeSsection">
-        <h1>Candy's Classic Cakes</h1>
+      <section class="home-section">
+        <h1 class="has-subheading">Candy's Classic Cakes</h1>
+        <h2 class="green-text subheading">
+          Scratch-made angel food cake and artisan sourdough
+        </h2>
         <a href="#" class="button">Order now</a>
       </section>
 
@@ -64,72 +71,163 @@
         </div>
       </section>
 
-      <!-- Green Section Example -->
+      <!-- History -->
+      <section id="history" class="home-section">
+        <h2 class="has-subheading pink-text">History</h2>
+        <h3 class="subheading"><em>A recipe decades in the making.</em></h3>
+
+        <figure>
+          <img
+            id="family-picture"
+            src="images/family_picture.png"
+            alt="A family photograph featuring Barbara Tucker and her son on his first birthday."
+          />
+          <figcaption>
+            Barbara Tucker with her son on his first birthday.
+          </figcaption>
+        </figure>
+
+        <p>
+          When Candace married into the Tucker family, she discovered their
+          delicious birthday tradition: angel food cake. This began with Grandma
+          Barbara, whose love for angel food cake made it the centerpiece of
+          countless family celebrations.
+        </p>
+
+        <p>
+          For years, Candace her new family baked angel food cakes from box
+          mixes. After moving to Idaho, where the mixes were hard to come by,
+          she decided to learn how to make them completely from scratch.
+        </p>
+
+        <p>
+          What started as a necessity became a passion. Today every Candy's
+          Classic Cake is made from scratch using the same love and tradition
+          that inspired those family celebrations.
+        </p>
+      </section>
+
       <section class="home-section green-section">
-        <section id="endorsed-products">
+        <section id="sourdough">
           <div class="container">
-            <h2>Other Section</h2>
+            <h2>Sourdough</h2>
             <p class="section-intro">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              alias ipsa assumenda illum.
+              <!-- ADD CONTENT HERE??????? -->
             </p>
 
-            <ul class="product-grid">
-              <li class="product-card">
-                <a
-                  href="https://www.standardprocess.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="product-link"
-                >
-                  <div class="logo-wrapper">
-                    <img
-                      src="images/placeholder.png"
-                      alt="Standard Process logo"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3>Lorem ipsum</h3>
-                </a>
-              </li>
+            <div class="product-grid">
+              <!-- Chocolate Sourdough -->
+              <article class="product-card">
+                <div class="img-wrapper">
+                  <img
+                    src="images/chocolate_sourdough.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <h3>Chocolate Sourdough</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
+                  excepturi eos veniam tempore magnam consectetur optio! Beatae
+                  nemo architecto inventore iusto sequi accusantium aut
+                  dignissimos! Adipisci quia incidunt nobis ipsum.
+                </p>
+              </article>
 
-              <!-- aegis formulas.com => need the special link -->
-              <li class="product-card">
-                <a
-                  href="https://www.aegisformulas.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="product-link"
-                >
-                  <div class="logo-wrapper">
-                    <img
-                      src="images/placeholder.png"
-                      alt="Aegis Formulas logo"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3>Lorem ipsum</h3>
-                </a>
-              </li>
+              <!-- Cinnamon Raisin Sourdough -->
+              <article class="product-card">
+                <div class="img-wrapper">
+                  <img
+                    src="images/cinnamon_raisin_sourdough.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <h3>Cinnamon Raisin Sourdough</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
+                  excepturi eos veniam tempore magnam consectetur optio! Beatae
+                  nemo architecto inventore iusto sequi accusantium aut
+                  dignissimos! Adipisci quia incidunt nobis ipsum.
+                </p>
+              </article>
 
-              <li class="product-card">
-                <a
-                  href="https://docereenergetics.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="product-link"
-                >
-                  <div class="logo-wrapper" id="docere-logo">
-                    <img
-                      src="images/placeholder.png"
-                      alt="Docere Energetics logo"
-                      loading="lazy"
-                    />
+              <!-- Classic Sourdough -->
+              <article class="product-card">
+                <div class="img-wrapper">
+                  <img
+                    src="images/classic_sourdough_favorite.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <h3>Classic Sourdough</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
+                  excepturi eos veniam tempore magnam consectetur optio! Beatae
+                  nemo architecto inventore iusto sequi accusantium aut
+                  dignissimos! Adipisci quia incidunt nobis ipsum.
+                </p>
+              </article>
+
+              <!-- Garlic Bread Sourdough -->
+              <article class="product-card">
+                <figure class="img-wrapper">
+                  <div
+                    class="carousel"
+                    aria-label="Garlic bread sourdough photos"
+                  >
+                    <ul class="carousel-track">
+                      <li>
+                        <img
+                          src="images/garlic_bread_sourdough_top.webp"
+                          alt="Garlic bread sourdough loaf with leaf indentation pattern on top"
+                        />
+                      </li>
+
+                      <li>
+                        <img
+                          src="images/garlic_bread_sourdough_side.webp"
+                          alt="Garlic bread sourdough loaf side view"
+                        />
+                      </li>
+
+                      <li>
+                        <img
+                          src="images/garlic_bread_sourdough_cut.webp"
+                          alt="Garlic bread sourdough loaf cut in half"
+                        />
+                      </li>
+                    </ul>
+
+                    <div class="carousel-controls">
+                      <button
+                        class="carousel-btn prev"
+                        type="button"
+                        aria-label="Previous image"
+                      >
+                        ←
+                      </button>
+                      <button
+                        class="carousel-btn next"
+                        type="button"
+                        aria-label="Next image"
+                      >
+                        →
+                      </button>
+                    </div>
                   </div>
-                  <h3>Lorem ipsum</h3>
-                </a>
-              </li>
-            </ul>
+                </figure>
+
+                <h3>Garlic Bread Sourdough</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reprehenderit officiis quos, esse modi saepe hic eius maxime
+                  obcaecati molestiae porro ut consectetur nulla omnis quasi
+                  rerum nisi cum voluptate ullam.
+                </p>
+              </article>
+            </div>
           </div>
         </section>
       </section>
@@ -152,7 +250,7 @@
         <a href="/"
           ><img
             src="images/logo.png"
-            alt="Atkins Chiropractic Treatment Home"
+            alt="Home | Candy's Classic Cakes"
             id="footer-logo"
         /></a>
 
@@ -172,7 +270,7 @@
         </div>
         <div id="footer-locations">
           <div id="chillicothe">
-            <h4>City Name One, ST</h4>
+            <h2 class="h4">City Name One, ST</h2>
             <address>
               123 Placeholder St.<br />
               City Name One, ST 00000<br />
@@ -185,7 +283,7 @@
           </div>
 
           <div id="jacksonville">
-            <h4>City Name Two, ST</h4>
+            <h2 class="h4">City Name Two, ST</h2>
             <address>
               456 Example Ave<br />
               City Name Two, ST 00000<br />
@@ -198,7 +296,7 @@
           </div>
         </div>
 
-        <p>&copy; 2025</p>
+        <p>&copy; 2026</p>
       </div>
     </footer>
   </body>

@@ -11,7 +11,7 @@
   --heading-color-green: #46a489;
 
   --background-color: #fff;
-  --background-color-alt: #a2e3d1;
+  --background-color-alt: #C0F2E3;
   --header-footer-bg-color: #f2f2f2;
 
   --button-background-color: #46a489;
@@ -51,6 +51,19 @@ body {
   top: 0;
 }
 
+.green-text {
+  color: var(--heading-color-green);
+}
+
+.pink-text {
+  color: var(--heading-color-pink);
+}
+
+figcaption {
+  font-style: italic;
+  color: var(--body-text-light);
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -64,6 +77,19 @@ body {
   border-radius: 5px;
   text-decoration: none;
   font-size: x-large;
+
+  transition:
+    background-color 250ms ease-in-out,
+    transform 250ms ease-in-out;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
 }
 
 #home-link {
@@ -107,7 +133,7 @@ body {
 .green-section h4,
 .green-section h5,
 .green-section h6 {
-  color: var(--body-text-dark);
+  color: var(--body-text-light);
 }
 
 #logo {
@@ -200,7 +226,6 @@ nav a:hover {
 
 #alert {
   font-weight: bold;
-  /* color: rgb(176, 52, 52); */
   color: #ad4b00;
   text-align: center;
 }
@@ -238,7 +263,7 @@ h6 {
 }
 
 /* Container Layout */
-#endorsed-products {
+#sourdough {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -252,26 +277,28 @@ h6 {
   color: #444;
 }
 
-/* The Grid Logic */
+/* PRODUCT STYLING */
 .product-grid {
   list-style: none;
   padding: 0;
   margin: 20px auto;
+
   display: grid;
-  grid-template-columns: 1fr; /* Stacked for mobile */
+  grid-template-columns: 1fr;
   gap: 2rem;
-  width: max-content; /* Shrinks grid to fit the cards */
-  max-width: 100%; /* Ensures it doesn't break mobile screens */
+
+  width: 100%;
+  max-width: 100%;
+
+  justify-content: center;
 }
 
 @media (min-width: 900px) {
   .product-grid {
-    /* Finds widest h3 and makes all 3 columns that exact size */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Card Styling */
 .product-card {
   background: white;
   border-radius: 20px;
@@ -279,17 +306,24 @@ h6 {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
+
+  min-width: 0;
   align-items: center;
   text-align: center;
+
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-.product-card:hover {
+.product-card h3 {
+  color: var(--heading-color-pink)
+}
+
+/* .product-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-}
+} */
 
 /* Link & Text Handling (No Underlines) */
 .product-link {
@@ -316,29 +350,26 @@ h6 {
   border-bottom: none !important;
 }
 
-/* Logo wrapper */
-.logo-wrapper {
-  width: 150px;
-  height: 90px;
+.product-card img {
+  max-width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Image wrapper */
+.img-wrapper {
+  /* width: 150px; */
+  max-height: 280px;
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.logo-wrapper img {
+.img-wrapper img {
   border-radius: 10px;
   margin-bottom: 30px;
-}
-
-.product-card img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-#docere-logo {
-  width: 180px;
 }
 
 /* Description */
@@ -347,10 +378,72 @@ h6 {
   line-height: 1.7;
   color: #444;
   white-space: normal;
+  text-align: center;
 }
 
-/* Heading styles */
-h1 {
+/* Carousel */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  /* remove ul styling */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;  
+
+  flex-wrap: nowrap;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track li {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-track img {
+  margin-bottom: 10px
+}
+
+.carousel-controls {
+  position: absolute;
+  inset: 0; /* covers full image area */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none; /* allows only buttons to be clickable */
+}
+
+.carousel-btn {
+  pointer-events: auto;
+
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+
+  border: none;
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* HEADING STYLES */
+h1,
+.h1 {
   font-size: 3rem;
   font-weight: 800;
   color: var(--heading-color-pink);
@@ -358,7 +451,8 @@ h1 {
   margin-bottom: 0.5em;
 }
 
-h2 {
+h2,
+.h2 {
   font-size: 2.25rem;
   font-weight: 700;
   color: var(--heading-color-green);
@@ -366,7 +460,8 @@ h2 {
   margin-bottom: 0.5em;
 }
 
-h3 {
+h3,
+.h3 {
   font-size: 1.75rem;
   font-weight: 700;
   color: #152b2e;
@@ -375,7 +470,8 @@ h3 {
   color: var(--heading-color-green);
 }
 
-h4 {
+h4,
+.h4 {
   font-size: 1.5rem;
   font-weight: 600;
   color: #444;
@@ -384,7 +480,8 @@ h4 {
   color: var(--heading-color-green);
 }
 
-h5 {
+h5,
+.h5 {
   font-size: 1.25rem;
   font-weight: 600;
   color: #555;
@@ -393,7 +490,8 @@ h5 {
   color: var(--heading-color-green);
 }
 
-h6 {
+h6,
+.h6 {
   font-size: 1rem;
   font-weight: 600;
   color: #666;
@@ -405,10 +503,13 @@ h6 {
 .subheading {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #555;
   margin-top: 0em;
   margin-bottom: 0.75em;
-  text-align: left;
+  text-align: center;
+}
+
+.has-subheading {
+  margin-bottom: 0.2em;
 }
 
 a {
@@ -493,6 +594,19 @@ dt {
 .bold {
   font-weight: 1000;
   color: var(--secondary-color);
+}
+
+/* FAMILY PHOTO */
+#family-picture {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin: 5px auto;
+}
+#history {
+  max-width: 800px;
+  margin: 0px auto 30px auto;
 }
 
 /* MEDIUM SCREEN STYLES */
