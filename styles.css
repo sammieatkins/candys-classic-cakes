@@ -11,7 +11,7 @@
   --heading-color-green: #46a489;
 
   --background-color: #fff;
-  --background-color-alt: #C0F2E3;
+  --background-color-alt: #e1f4ee;
   --header-footer-bg-color: #f2f2f2;
 
   --button-background-color: #46a489;
@@ -28,6 +28,17 @@
   white-space: nowrap;
   overflow: hidden;
   width: 1px;
+}
+
+.button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
 }
 
 body {
@@ -425,9 +436,10 @@ h6 {
   height: 38px;
   border-radius: 999px;
 
-  border: none;
-  background: rgba(0, 0, 0, 0.45);
+  background-color: var(--button-background-color);
   color: white;
+  font-weight: bold;
+  border: none;
 
   display: flex;
   align-items: center;
@@ -849,4 +861,37 @@ dt {
   mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
+}
+
+.material-symbols--arrow-circle-left {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='m12 16l1.4-1.4l-1.6-1.6H16v-2h-4.2l1.6-1.6L12 8l-4 4zm0 6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22'/%3E%3C/svg%3E");
+  background-color: var(--button-background-color);
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  border: 2px solid var(--button-background-color);
+  font-size: 3em;
+}
+
+.material-symbols--arrow-circle-right {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='m12 16l4-4l-4-4l-1.4 1.4l1.6 1.6H8v2h4.2l-1.6 1.6zm0 6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22'/%3E%3C/svg%3E");
+  background-color: var(--button-background-color);
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+
+  border: 2px solid var(--button-background-color);
+  font-size: 3em;
 }
