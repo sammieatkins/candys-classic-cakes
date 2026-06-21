@@ -429,7 +429,13 @@ h6 {
   pointer-events: none; /* allows only buttons to be clickable */
 }
 
+
 .carousel-btn {
+  pointer-events: auto;
+}
+
+
+/* .carousel-btn {
   pointer-events: auto;
 
   width: 38px;
@@ -451,7 +457,7 @@ h6 {
 
 .carousel-btn:hover {
   background: rgba(0, 0, 0, 0.65);
-}
+} */
 
 /* HEADING STYLES */
 h1,
@@ -892,6 +898,5 @@ dt {
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
 
-  border: 2px solid var(--button-background-color);
   font-size: 3em;
 }
